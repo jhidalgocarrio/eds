@@ -1,0 +1,15 @@
+<package>
+    <description brief="CMake find scripts and macros">
+        This software package contains CMake find scripts and macros
+        to facilitate developing CMake based libraries.
+    </description>
+    <author>Sylvain Joyeux/sylvain.joyeux@m4x.org</author>
+    <copyright>
+        DFKI/robotik@dfki.de
+        Sylvain Joyeux/sylvain.joyeux@m4x.org
+    </copyright>
+    <license>LGPL v2 or later</license>
+    <depend package="cmake" />
+    <depend package="pkg-config" />
+    <tags>stable</tags>
+</package>

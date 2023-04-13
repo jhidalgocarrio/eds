@@ -1,0 +1,11 @@
+<package>
+  <description brief="Rock base library containing logging utilities">
+  Provision simple printf style and stream-based logging facilities
+  </description>
+  <author>Steffen Planthaber/steffen.planthaber@dfki.de</author>
+  <author>Thomas Roehr/thomas.roehr@dfki.de</author>
+  <maintainer>Thomas Roehr/thomas.roehr@dfki.de</maintainer>
+  <license>New BSD License</license>
+  <url>https://github.com/rock-core/base-logging</url>
+  <depend package="base/cmake" />
+</package>
