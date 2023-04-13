@@ -1,9 +1,9 @@
 
 Event-aided Direct Sparse Odometry (EDS) [Standalone]
 =============
-Direct visual odometry approach using events and frames (CVPR 2022)
-This is the Rock component (equivalent to a ROS node) which uses the
-C++ [EDS library](https://github.com/uzh-rpg/slam-eds) to create a Task. 
+Direct visual odometry approach using events and frames (CVPR 2022) This is an
+standalone version of the orginal
+[EDS]((https://github.com/uzh-rpg/eds-buildconf)
 
 License
 -------
@@ -27,16 +27,12 @@ sudo apt install libsuitesparse-dev
 
 Installation
 ------------
-This is an standalone version of the orginal [EDS]((https://github.com/uzh-rpg/eds-buildconf)
 
 ```console
 git clone git@github.com:jhidalgocarrio/eds.git
 cd eds
 ./make.sh all
 ```
-
-
-
 ### EDS Folder Structure
 
 | directory         |       purpose                                                        |
