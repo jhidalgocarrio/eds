@@ -3,7 +3,7 @@ Event-aided Direct Sparse Odometry (EDS) [Standalone]
 =============
 Direct visual odometry approach using events and frames (CVPR 2022) This is an
 standalone version of the orginal
-[EDS]((https://github.com/uzh-rpg/eds-buildconf)
+[EDS](https://github.com/uzh-rpg/eds-buildconf)
 
 License
 -------
@@ -45,4 +45,4 @@ cd eds
 | yaml_cpp          | YAML CXX library (used for config)                                   |
 | ceres             | The ceres solver library                                             |
 | lib               | The EDS C++ library                                                  |
-| task              | Main EDS task class                                                  |
+| task              | Main EDS task C++ class                                              |
