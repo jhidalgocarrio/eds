@@ -193,7 +193,7 @@ void Task::frameCallback(const base::Time &ts, const ::base::samples::frame::Fra
     delete img;
 }
 
-bool Task::configureHook(const std::string &config_filename, const std::string &calib_filename)
+bool Task::configure(const std::string &config_filename, const std::string &calib_filename)
 {
     /** Read the Yaml configuration file **/
     YAML::Node config = YAML::LoadFile(config_filename);
@@ -284,7 +284,7 @@ bool Task::configureHook(const std::string &config_filename, const std::string &
     return true;
 }
 
-bool Task::startHook()
+bool Task::start()
 {
     /** Reset counters **/
     this->ef_idx = this->frame_idx = this->kf_idx = 0;
@@ -340,7 +340,7 @@ bool Task::startHook()
     return true;
 }
 
-void Task::stopHook()
+void Task::stop()
 {
     this->printResult("stamped_traj_estimate.txt");
 
@@ -366,7 +366,7 @@ void Task::stopHook()
     this->active_residuals.clear();
 }
 
-void Task::cleanupHook()
+void Task::cleanup()
 {
     this->calib.reset();
     this->undistort.reset();

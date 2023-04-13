@@ -130,46 +130,39 @@ namespace eds{
          */
         Task(std::string const& name = "eds::Task");
 
-        /** Default deconstructor of Task
+        /**
+         * Default deconstructor of Task
          */
         ~Task();
 
-        /** This hook is called by Orocos when the state machine transitions
-         * from PreOperational to Stopped. If it returns false, then the
-         * component will stay in PreOperational. Otherwise, it goes into
-         * Stopped.
-         *
-         * It is meaningful only if the #needs_configuration has been specified
-         * in the task context definition with (for example):
-         \verbatim
-         task_context "TaskName" do
-           needs_configuration
-           ...
-         end
-         \endverbatim
+        /**
+         * EDS configure
          */
-        bool configureHook(const std::string &config_filename, const std::string &calib_filename);
+        bool configure(const std::string &config_filename, const std::string &calib_filename);
 
-        /** This hook is called by Orocos when the state machine transitions
-         * from Stopped to Running. If it returns false, then the component will
-         * stay in Stopped. Otherwise, it goes into Running and updateHook()
-         * will be called.
+        /**
+         * EDS start
          */
-        bool startHook();
+        bool start();
 
-        /** This hook is called by Orocos when the state machine transitions
-         * from Running to Stopped after stop() has been called.
+        /** 
+         * EDS Stop
          */
-        void stopHook();
+        void stop();
 
-        /** This hook is called by Orocos when the state machine transitions
-         * from Stopped to PreOperational, requiring the call to configureHook()
-         * before calling start() again.
+        /**
+         * EDS cleanup
          */
-        void cleanupHook();
+        void cleanup();
 
-        void eventsCallback(const base::Time &ts, const ::base::samples::EventArray &events_sample);
+        /**
+         * event array callback function
+         */
+        void eventsCallback(const base::Time &ts, const ::base::samples::EventArray &events_sample);        
 
+        /**
+        *  image frame callback
+        */
         void frameCallback(const base::Time &ts, const ::base::samples::frame::Frame &frame_sample, const bool frame_interrupt = false);
 
     protected:
